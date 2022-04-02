@@ -7,10 +7,8 @@ pipeline
         {
                steps
                {
-                    step
-                    {
-                        sh echo 'Hi'    
-                    }
+                        sh 'echo Hi'    
+                    
                } 
 
         }
