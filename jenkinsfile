@@ -3,23 +3,17 @@ pipeline
     agent any
     stages
     {
-        stage('print')
-        {
-               steps
-               {
-                        sh 'echo Hi'    
-                    
-               } 
-            stage ('code compile' )
+            
+        stage ('code compile' )
                 {
                     steps {  
                         withMaven(jdk: 'JDK_HOME', maven: 'MAVEN_HOME') 
                         
                         { sh 'mvn compile'}
-   }}
+                }}
 
         }
     }
-}
+
 
 
